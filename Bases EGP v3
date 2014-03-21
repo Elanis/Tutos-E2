@@ -1,0 +1,47 @@
+@name Bases EGP v3
+@inputs S:wirelink Variable Bouclier Entity PersonneVisee:entity
+@persist TBouclier:string TEntity:string Name:string
+
+#Types Principaux d'objets des EGP
+
+S:egpBox(1,vec2(255,250),vec2(400,120))#boite(id,centre,taille)
+S:egpColor(1,vec(150,150,150))#couleur(id,rgb)
+S:egpText(2,"Texte",vec2(140,230))#boite(id,texte,centre)
+S:egpFont(2,"Anquietas")#Police(id,police)
+S:egpCircle(3,vec2(255,250),vec2(400,120))#Cercle(id,centre,taille)
+S:egpLine(4,vec2(255,250),vec2(400,120))#boite(id,pos1,pos2)
+
+S:egpClear()#Vider l'ecran
+
+#Inserer une variable dans un texte
+S:egpText(2,"Texte"+Variable+"SuiteduTexte",vec2(140,230))
+
+#On/Off du bouclier
+
+if(Bouclier==1)
+{
+TBouclier="on"
+}
+if(Bouclier==0)
+{
+TBouclier="off"
+}
+
+#Cible 
+
+Name = PersonneVisee:name()
+
+#Fond
+
+S:egpBox(1,vec2(255,25),vec2(5500,6000))
+S:egpColor(1,vec(0,0,0))
+
+#Bouclier
+
+S:egpText(6,"Bouclier : " + TBouclier,vec2(100,35))
+S:egpSize(6,60)
+
+#Cible
+
+S:egpText(7,"Cible : " + Name,vec2(100,35))
+S:egpSize(7,60)
