@@ -2,6 +2,11 @@
 @inputs S:wirelink Variable Bouclier Entity PersonneVisee:entity
 @persist TBouclier:string TEntity:string Name:string
 
+############################################################
+########################## Par Elanis ######################
+################### https://github.com/Elanis ##############
+############################################################
+
 #Types Principaux d'objets des EGP
 
 S:egpBox(1,vec2(255,250),vec2(400,120))#boite(id,centre,taille)
