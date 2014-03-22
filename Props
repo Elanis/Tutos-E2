@@ -1,0 +1,28 @@
+@name Props
+@persist Prop:entity
+
+
+#Les Fonctions :
+
+    propSpawn("Modele", Position, Angle, Frozen/Unfrozen) 
+    #Pour faire spawn la prop du modele , a la position dite , avec l'angle dit et freeze ou pas.
+
+    Prop = propSpawn("models/Items/combine_rifle_ammo01.mdl", E:toWorld(vec(0,0,10)), E:angles(), 1)
+    
+    #Cette comande spawn une prop freeze et droite au dessus de l'E2 par exemple
+
+    Prop:setPos( Vector )
+    #Modifier les position de la prop
+    
+    Prop:setAng( Angle )
+    #Modifier l'angle de la prop
+    
+    Prop:propDelete()
+    #Supprimer la prop
+    
+    Prop:propBreak()
+    #Faire Exploser la prop si celle-ci le peut
+
+    Prop:propAnim("animation",1)
+    #Cette fonction tres peu rependue et crée par Person88800.
+    #Anime la prop selon l'animation dite.
