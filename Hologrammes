@@ -1,0 +1,16 @@
+@name Hologrames
+
+############################################################
+########################## Par Elanis ######################
+################### https://github.com/Elanis ##############
+############################################################
+
+holoCreate(1) #Creer l'hologramme 1
+holoModel(1,"chemin/model/trucholo.mdl") #Choisir le modele de l'hologramme 1
+holoPos(1,vec(0,0,0)) #Definir la position ( Vector ) de l'hologramme 1
+holoAng(1,vec(0,0,0)) #Meme chose pour l'angle
+holoAnim(1,"nom/numero de l'anim") #Animer l'hologramme
+holoMaterial(1,"material") # Changer le materiau de l'hologramme
+holoSkin(1,2) #Changer le skin de l'objet hologramme ( si il en a plusieurs ) , le deuxieme nombre defini le skin.
+holoDelete(1) #Supprimer l'hologramme 1
+holoDeleteAll() #Supprimer TOUT les hologrammes
