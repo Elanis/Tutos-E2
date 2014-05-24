@@ -2,6 +2,11 @@
 @outputs Sortie
 @persist A:string
 
+############################################################
+########################## Par Elanis ######################
+################### https://github.com/Elanis ##############
+############################################################
+
 runOnChat(1) #On active le controle via le chat
 
 if (chatClk(owner()))
