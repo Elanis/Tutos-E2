@@ -1,0 +1,23 @@
+@name Controle Simple via Chat
+@outputs Sortie
+@persist A:string
+
+runOnChat(1) #On active le controle via le chat
+
+if (chatClk(owner()))
+
+{
+
+A = owner():lastSaid():lower() #On defini la variable A
+
+if(A=="bouton on") #Si l'on dit ca ...
+{
+Sortie=1 # ... la sortie est allumée
+}
+
+if(A=="bouton off") #Si on dit ca ...
+{
+Sortie=0 # ... la sortie est eteinte
+}
+
+} #Ne pas oublier de fermer toutes les accolades
