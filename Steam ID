@@ -1,0 +1,14 @@
+@name Steam_ID
+@inputs
+@outputs
+@persist
+
+############################################################
+########################## Par Elanis ######################
+################### https://github.com/Elanis ##############
+############################################################
+
+#Cette E2 est très basique et vous donne dans le chat votre steam ID ce qui peut vous aider pour certaines e2
+#ou vous aurez besoin de ce steam ID comme l'anti-duplication par exemple.
+
+if(first()) { print(entity():owner():steamID()) }
