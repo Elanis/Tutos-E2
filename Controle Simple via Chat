@@ -13,14 +13,14 @@ if (chatClk(owner()))
 
 {
 
-A = owner():lastSaid():lower() #On defini la variable A
+A = owner():lastSaid():lower() #On defini la variable A qui est ce que dit l'owner en majuscule ou en minuscule
 
-if(A=="bouton on") #Si l'on dit ca ...
+if(A=="bouton on") #Si l'on dit bouton on ...
 {
 Sortie=1 # ... la sortie est allumée
 }
 
-if(A=="bouton off") #Si on dit ca ...
+if(A=="bouton off") #Si on dit bouton off ...
 {
 Sortie=0 # ... la sortie est eteinte
 }
