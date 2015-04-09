@@ -1,0 +1,34 @@
+@name Nom de l'E1
+@outputs SortieWire1 Sortie2
+@inputs EntreeWireMod
+@persist VariablePersistante
+@model models/bidule/machin.mdl
+@trigger all
+@autoupdate
+
+#Ceci est un commentaire , ce n'est pas considéré par le code
+
+################ Les Entetes ################
+# Name : nom
+# Les outputs : Sorties de l'E2
+# Les inputs : Entrees de l'E2
+# Les persists , des variables dites locales car elles ne sont pas visibles en exterieur de l'E2
+# L'entete model sert a changer le modele de cette E2
+# Le trigger est une fonction complexe en rapport avec l'activation de certaines inputs , peu de personnes l'utilisent
+# L'autoupdate : si cette entete est mise , a chaque duplicaton , l'E2 cherchera dans les fichiers une version plus recente d'elle même
+#############################################
+
+############## Les Variables ##############
+# Elles doivent TOUJOURS commencer par une majuscule
+# Elle ne doivent pas contenir d'espace
+################ Les Types ################
+# Type => decription => Declaration
+# Entity => une entite => Var:entity
+# Number => un nombre => Var
+# Table => un tableau => Var:table
+# Array => un autre type de tableau => Var:array
+# String => les chaines de characteres => Var:string
+# Vecteurs => un vecteur ( le plus souvent coordonnées ) a 2,3 ou 4 parties => Var:vector
+# Angles => un angle => Var:angle
+# Wirelink => un "groupe" de liens wire => Var:wirelink
+#############################################
