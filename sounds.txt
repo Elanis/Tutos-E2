@@ -1,0 +1,30 @@
+@name Sounds
+@outputs
+@inputs
+@persist [E,O]:entity
+
+E=entity() #On facilite le code en assignant l'E2 a la variable E
+O=owner() #De même pour le createur de l'E2
+
+# /!\ L'index spécifié plus bas peut etre une chaine de caractere ( String ) ou un chiffre ( Int ) /!\
+
+#Premiere fonction : soundPlay()
+soundPlay(Index, int Duree, string Lien du fichier) #Ici on joue le son pour tout ceux aux environs de l'E2
+
+O:soundPlay(Index, int Duree, string Lien du fichier) #Ici on joue le son pour l'entite precise , ici l'owner
+
+#Seconde fonction : soundStop()
+
+soundStop(Index) #Ceci stoppe le son avec l'index donné
+
+#Troisieme fonction : soundVolume()
+
+soundVolume(Index, Int Volume) #Ici on peut (des)activer le volume du son (0 ou 1)
+
+#Quatrieme fonction : soundPitch()
+
+soundPitch(Index, Int Pitch) #Ici on regle le volume du son ( par defaut 100 )
+
+#Derniere fonction : soundPurge()
+
+soundPurge() #Retire tout les sons actifs de cette E2
