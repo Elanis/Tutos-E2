@@ -1,4 +1,4 @@
-@name Nom de l'E1
+@name Nom de l'E2
 @outputs SortieWire1 Sortie2
 @inputs EntreeWireMod
 @persist VariablePersistante
