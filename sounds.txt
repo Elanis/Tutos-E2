@@ -3,6 +3,12 @@
 @inputs
 @persist [E,O]:entity
 
+############################################################
+########################## Par Elanis ######################
+################### https://github.com/Elanis ##############
+############################################################
+
+
 E=entity() #On facilite le code en assignant l'E2 a la variable E
 O=owner() #De même pour le createur de l'E2
 
