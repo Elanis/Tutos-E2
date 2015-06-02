@@ -1,0 +1,14 @@
+@name Group
+@inputs Bouton Entity:entity
+@outputs 
+@persist 
+@trigger 
+
+############################################################
+########################## Par Elanis ######################
+################### https://github.com/Elanis ##############
+############################################################
+
+#Cette E2 print ( ecrit dans le chat ) le groupe ulx de la personne Entity
+
+if(Bouton==1) { print(Entity:getUserGroup()) }

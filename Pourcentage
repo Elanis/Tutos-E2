@@ -1,0 +1,12 @@
+@name Pourcentage
+@inputs Chiffre Total
+@outputs Pourcent
+
+############################################################
+########################## Par Elanis ######################
+################### https://github.com/Elanis ##############
+############################################################
+
+#Cette E2 Permet de calculer un pourcentage
+
+Pourcent = Chiffre / Total * 100
