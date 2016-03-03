@@ -6,27 +6,66 @@
 ################### https://github.com/Elanis ##############
 ############################################################
 
+#Wiki officiel Props:
+#http://wiki.wiremod.com/wiki/Propcore
+
+#Si le propcore n'est pas actif , taper 
+#dans la console serveur ( ou client en partie solo ) :
+# wire_expression2_extension_enable propcore
+
 #Les Fonctions :
 
-    propSpawn("Modele", Position, Angle, Frozen/Unfrozen) 
+    propSpawn("Modele", Position, Angle, Freeze) 
     #Pour faire spawn la prop du modele , a la position dite , avec l'angle dit et freeze ou pas.
 
-    Prop = propSpawn("models/Items/combine_rifle_ammo01.mdl", E:toWorld(vec(0,0,10)), E:angles(), 1)
-    
-    #Cette comande spawn une prop freeze et droite au dessus de l'E2 par exemple
+    #Exemple:
+    Prop = propSpawn("models/Items/combine_rifle_ammo01.mdl", entity():toWorld(vec(0,0,10)), entity():angles(), 1)
+    #Cette comande spawn une prop freeze , dans le sens et au dessus de l'E2
 
-    Prop:setPos( Vector )
+
+    Prop:propManipulate(Position,Angle,Freeze,Gravity,NoSolid)
+    #Manipuler les caracteristiques de l'objet
+    
+    Prop:setPos(Position)
     #Modifier les position de la prop
     
-    Prop:setAng( Angle )
+    Prop:setAng(Angle)
     #Modifier l'angle de la prop
+    
+    Prop:propFreeze(Freeze)
+    #Freeze la prop
+    
+    Prop:propNotSolid(NoSolid)
+    #La mettre en no-collide
+    
+    Prop:propGravity(Gravity)
+    #Gerer la gravite
     
     Prop:propDelete()
     #Supprimer la prop
     
     Prop:propBreak()
     #Faire Exploser la prop si celle-ci le peut
-
+    
+    Prop:parentTo(Prop2)
+    #Definir un parent a cette prop
+    
+    Prop:deparent()
+    #On retire le parent
+    
     Prop:propAnim("animation",1)
-    #Cette fonction tres peu rependue et crée par Person88800.
+    #Cette fonction tres peu repandue et cree par Person88800.
     #Anime la prop selon l'animation dite.
+
+    ############ Les Forces ###############
+    
+    Prop:applyAngForce(Angle)
+    #Appliquer une force angulaire ( Rotation )
+    
+    Prop:applyForce(Dir)
+    #Appliquer une force rectiligne sur l'objet
+    
+    Prop:applyOffsetForce(Dir,Pos)
+    #Appliquer une force rectiligne comme si elle etait
+    #emise a partir d'une postion precise de la map.
+    #C'est le principe du Torseur.
